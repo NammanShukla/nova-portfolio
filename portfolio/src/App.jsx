@@ -7,12 +7,17 @@ import Blog from './pages/Blog';
 
 function About() {
   return (
-    <div className="flex flex-col md:flex-row flex-grow w-full">
+  <div className="flex flex-col md:flex-row w-full h-[calc(100vh-4rem)]">
+    <div className="w-full md:basis-[30%] bg-[#1a1a1d] flex items-center justify-center py-8 md:py-0"> 
       <Profile />
+      </div>
+    <div className="w-full md:basis-[70%]">
       <Resume />
-    </div>
+      </div>
+  </div>
   );
 }
+
 
 export default function App() {
   return (
