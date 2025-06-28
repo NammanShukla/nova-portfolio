@@ -1,5 +1,6 @@
 import ReactMarkdown from "react-markdown";
-import { FaGithub, FaExternalLinkAlt, FaFileAlt, FcGoogle } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { SiGoogledocs } from "react-icons/si";
 
 export default function ProjectPanel({ project, onClose }) {
   if (!project) return null;
@@ -8,6 +9,12 @@ export default function ProjectPanel({ project, onClose }) {
     ? project.github
     : project.github
     ? [project.github]
+    : [];
+
+  const demoLinks = Array.isArray(project.demo)
+    ? project.demo
+    : project.demo
+    ? [project.demo]
     : [];
 
   return (
@@ -48,16 +55,18 @@ export default function ProjectPanel({ project, onClose }) {
       <div className="flex flex-wrap gap-3 text-sm mt-4">
         {githubLinks.map((link, index) => {
           const url = typeof link === "string" ? link : link?.url;
-          const label = typeof link === "object" && link?.name
-            ? link.name
-            : `GitHub Repo ${index + 1}`;
+          const label =
+            typeof link === "object" && link?.name
+              ? link.name
+              : `GitHub Repo ${index + 1}`;
 
           return (
             url && (
               <a
-                key={index}
+                key={`github-${index}`}
                 href={url}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-[#3a3a3c] hover:bg-[#333] text-white px-3 py-2 rounded transition"
               >
                 <FaGithub className="text-[#FFD600]" />
@@ -67,24 +76,37 @@ export default function ProjectPanel({ project, onClose }) {
           );
         })}
 
-        {project.demo && (
-          <a
-            href={project.demo}
-            target="_blank"
-            className="flex items-center gap-2 bg-[#3a3a3c] hover:bg-[#0072b1] text-white px-3 py-2 rounded transition"
-          >
-            <FaExternalLinkAlt className="text-[#00FFA3]" />
-            Live Demo
-          </a>
-        )}
+        {demoLinks.map((link, index) => {
+          const url = typeof link === "string" ? link : link?.url;
+          const label =
+            typeof link === "object" && link?.name
+              ? link.name
+              : `Live Demo ${index + 1}`;
 
-        {project.doc && (
+          return (
+            url && (
+              <a
+                key={`demo-${index}`}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-[#3a3a3c] hover:bg-[#333] text-white px-3 py-2 rounded transition"
+              >
+                <FaExternalLinkAlt className="text-[#FFD600]" />
+                {label}
+              </a>
+            )
+          );
+        })}
+
+        {project.docs && (
           <a
-            href={project.doc}
+            href={project.docs}
             target="_blank"
-            className="flex items-center gap-2 bg-[#3a3a3c] hover:bg-[#9b59b6] text-white px-3 py-2 rounded transition"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-[#4285F4] text-white px-3 py-2 rounded hover:bg-[#3367D6] transition"
           >
-            <FcGoogle className="text-lg" />
+            <SiGoogledocs className="text-lg" />
             Documentation
           </a>
         )}
