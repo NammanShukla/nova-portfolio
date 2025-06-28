@@ -25,7 +25,7 @@ export default function Resume() {
 
         {/* Education */}
           <div>
-              <div class="flex items-center gap-3 text-[#FFD600] text-xl font-semibold mb-2">
+              <div className="flex items-center gap-3 text-[#FFD600] text-xl font-semibold mb-2">
                 <FaGraduationCap />
                 <span>Education</span>
               </div>
