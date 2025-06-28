@@ -71,6 +71,18 @@ export default function Projects() {
               {tag}
             </button>
           ))}
+
+          {(tagFilter || search) && (
+            <button 
+                onClick={() => {
+                setSearch("");
+                setTagFilter("");
+              }}
+              className="px-3 py-1 rounded text-xs bg-[#FFD600] text-black hover:bg-yellow-400 transition"
+              >
+                Reset
+            </button>
+          )}
         </div>
       </div>
 
