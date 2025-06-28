@@ -4,7 +4,7 @@ import { MdEmail } from 'react-icons/md';
 
 export default function Profile() {
   return (
-    <div className="flex flex-col items-center justify-center text-center text-[#e0e0e0] w-full max-w-lg px-2">
+    <div className="w-full h-full px-4 py-16 flex flex-col items-center justify-start text-center bg-[#1a1a1d] text-[#e0e0e0] overflow-y-auto pb-24">
       <img
         src={profilePic}
         alt="Profile"
@@ -13,11 +13,11 @@ export default function Profile() {
 
       <h1 className="text-2xl font-bold text-[#FFD600] mb-2">Namman Shukla</h1>
 
-      <p className="text-sm text-gray-400 mb-6">
-        Tech enthusiast from New Delhi. I code, I game, I watch anime, and I'm on a quest to level up in life — mentally, physically, and professionally.
+      <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-400 leading-relaxed">
+        Software Developer and Tech Enthusiast
       </p>
 
-      <div className="flex gap-3">
+      <div className="flex gap-4 mt-8">
         <a
           href="https://discordapp.com/users/nammanc137"
           target="_blank"
@@ -49,6 +49,13 @@ export default function Profile() {
         >
           <FaGithub className="text-white text-xl" />
         </a>
+      </div>
+
+      <div className="mt-10 flex flex-col items-center w-full px-4">
+        <img
+        src="https://github-readme-streak-stats.herokuapp.com/?user=NammanShukla&theme=tokyonight"
+        alt="GitHub Streak"
+        className="w-full max-w-md rounded-lg shadow-md"/>
       </div>
     </div>
   );
