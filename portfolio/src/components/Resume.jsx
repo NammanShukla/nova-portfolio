@@ -34,7 +34,7 @@ export default function Resume() {
               <li>
                 <strong>James Cook University, Singapore</strong> — Bachelor of IT (2024)<br />
                 <ol className="list-disc list-inside ml-4 space-y-1 mt-2">
-                  <li>GPA = 5.02 / 7</li>
+                  <li>GPA - 5.02 / 7</li>
                   <li>Earned High Distinction in Advanced Software Engineering, Collective Intelligence & Entrepreneurship</li>
                   <li>First Prize Winner @ JCUS 29th Convergence Conference</li>
                   <li>Elected IT Club President @ iD8Labs JCUS</li>
