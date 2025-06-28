@@ -1,5 +1,5 @@
 import ReactMarkdown from "react-markdown";
-import { FaGithub, FaExternalLinkAlt, FaFileAlt } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaFileAlt, FcGoogle } from "react-icons/fa";
 
 export default function ProjectPanel({ project, onClose }) {
   if (!project) return null;
@@ -44,7 +44,7 @@ export default function ProjectPanel({ project, onClose }) {
         ))}
       </div>
 
-      {/* 🔥 Button-styled links */}
+      {/* Button-styled links */}
       <div className="flex flex-wrap gap-3 text-sm mt-4">
         {githubLinks.map((link, index) => {
           const url = typeof link === "string" ? link : link?.url;
@@ -84,7 +84,7 @@ export default function ProjectPanel({ project, onClose }) {
             target="_blank"
             className="flex items-center gap-2 bg-[#3a3a3c] hover:bg-[#9b59b6] text-white px-3 py-2 rounded transition"
           >
-            <FaFileAlt className="text-[#FFD600]" />
+            <FcGoogle className="text-lg" />
             Documentation
           </a>
         )}
