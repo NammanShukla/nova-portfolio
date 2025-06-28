@@ -1,10 +1,9 @@
 ---
-title: "Multiplayer Trivia Game"
-date: "2024-03-22"
-tags: ["React", "Socket.io", "Game"]
-github: "https://github.com/NammanShukla/trivia-game"
-demo: "https://trivia.nammanshukla.com"
+title: "Movie Library"
+tags: ["React", "API Integration", "Redux", "Axios"]
+github: 
+- {name: "Source Code", url: "https://github.com/NammanShukla/movie-library"}
+summary: "Simple movie database app built with React and Redux Toolkit using OMDB API"
 ---
 
-A real-time multiplayer trivia game built with React, Node.js, and Socket.io.
-Users can join rooms, compete on questions, and see live scores in a clean UI.
+Built a lightweight movie search app using React with Redux Toolkit and Redux Thunk for state and async management. Integration Axios to fetch data from the OMDB API and display movie details dynamically. 

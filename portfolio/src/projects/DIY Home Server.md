@@ -1,6 +1,6 @@
 ---
 title: "DIY Home Server"
-tags: ["Computer Networking", "Linux", "Shell Scripting"]
+tags: ["Computer Networking", "Linux", "Shell Scripting", "Research"]
 summary: "Repurposed old gaming PC into a home server with Plex, Minecraft, Tailscale for secure access, and a Raspberry Pi for remote access."
 docs: "https://docs.google.com/document/d/1xg9mhcLzwKbfeAWEiFaJPRWCs-vPFomKNE2vJUJYcnI/edit?tab=t.0#heading=h.avly6dtkvsp1"
 ---

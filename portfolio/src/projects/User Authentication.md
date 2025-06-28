@@ -1,10 +1,8 @@
 ---
-title: "Multiplayer Trivia Game"
-date: "2024-03-22"
-tags: ["React", "Socket.io", "Game"]
-github: "https://github.com/NammanShukla/trivia-game"
-demo: "https://trivia.nammanshukla.com"
+title: "User Authentication"
+tags: ["React", "Context API"]
+github: {name: "Source Code", url: "https://github.com/NammanShukla/UserAuth"}
+summary: "Implemented user authentication in React using Context API for login state management."
 ---
 
-A real-time multiplayer trivia game built with React, Node.js, and Socket.io.
-Users can join rooms, compete on questions, and see live scores in a clean UI.
+Built a simple login/logout flow using React’s Context API to manage authentication state across components. The UI dynamically updates based on login status, and the logout function clears context to reset the user session.

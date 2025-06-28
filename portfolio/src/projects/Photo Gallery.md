@@ -1,10 +1,11 @@
 ---
-title: "Multiplayer Trivia Game"
-date: "2024-03-22"
-tags: ["React", "Socket.io", "Game"]
-github: "https://github.com/NammanShukla/trivia-game"
-demo: "https://trivia.nammanshukla.com"
+title: "Photo Gallery"
+tags: ["React", "Javascript", "HTML/CSS", "API Integration", "AJAX"]
+github: 
+- {name : "Vanilla JS Version", url: "https://github.com/NammanShukla/photogallery" }
+- {name : "React Version", url: "https://github.com/NammanShukla/react-gallery" }
+summary : "Responsive photo gallery app built with both Vanilla JS and React, featuring modals, carousels, and dynamic image fetching via APIs."
 ---
 
-A real-time multiplayer trivia game built with React, Node.js, and Socket.io.
-Users can join rooms, compete on questions, and see live scores in a clean UI.
+Created two versions of a responsive photo gallery app — one using HTML, CSS, and Vanilla JavaScript, and another using React with modular components. The Vanilla version includes a custom-built carousel, modals, and dynamic image loading via the Pixabay API using AJAX, with fallback to local assets or Picsum. The React version improves maintainability by splitting UI into components like a header and carousel, replacing hardcoded logic with an npm carousel package for smoother UX.
+

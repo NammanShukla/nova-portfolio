@@ -1,10 +1,9 @@
 ---
-title: "Multiplayer Trivia Game"
-date: "2024-03-22"
-tags: ["React", "Socket.io", "Game"]
-github: "https://github.com/NammanShukla/trivia-game"
-demo: "https://trivia.nammanshukla.com"
+title: "Shopping Cart"
+tags: ["Javascript"]
+github: {name: "Source Code", url: "https://github.com/NammanShukla/shopping-cart-js"}
+summary: "Built a shopping cart using basic Object-Oriented Programming principles in JavaScript"
 ---
+Completed a FreeCodeCamp project focused on learning Object-Oriented Programming by creating a shopping cart system. Defined and used classes to handle product data, cart operations (add/remove), and state management, reinforcing concepts like encapsulation and method design.
 
-A real-time multiplayer trivia game built with React, Node.js, and Socket.io.
-Users can join rooms, compete on questions, and see live scores in a clean UI.
+

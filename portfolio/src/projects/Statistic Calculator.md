@@ -1,10 +1,8 @@
 ---
-title: "Multiplayer Trivia Game"
-date: "2024-03-22"
-tags: ["React", "Socket.io", "Game"]
-github: "https://github.com/NammanShukla/trivia-game"
-demo: "https://trivia.nammanshukla.com"
+title: "Statistic Calculator"
+tags: ["JavaScript"]
+github: {name: "Source Code", url: "https://github.com/NammanShukla/stat-calc"}
+summary: "Built a statistics calculator using advanced array methods in JavaScript."
 ---
 
-A real-time multiplayer trivia game built with React, Node.js, and Socket.io.
-Users can join rooms, compete on questions, and see live scores in a clean UI.
+Completed and enhanced a FreeCodeCamp project focused on mastering advanced JavaScript array methods like .map(), .reduce(), .filter(), and .sort() by building a statistics calculator. Added personal tweaks to the original logic and published the final version to GitHub.
