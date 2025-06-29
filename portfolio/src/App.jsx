@@ -4,6 +4,7 @@ import Profile from './components/Profile';
 import Resume from './components/Resume';
 import Projects from './pages/Projects';
 import Blog from './pages/Blog';
+import BlogPage from './pages/BlogPage';
 
 function About() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blogs/:slug" element={<BlogPage />} />
         </Routes>
         <Navbar />
       </div>
