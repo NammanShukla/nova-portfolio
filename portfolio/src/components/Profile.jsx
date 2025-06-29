@@ -4,7 +4,7 @@ import { MdEmail } from 'react-icons/md';
 
 export default function Profile() {
   return (
-    <div className="w-full h-full px-4 py-16 flex flex-col items-center justify-start text-center bg-[#1a1a1d] text-[#e0e0e0] overflow-y-auto pb-24">
+    <div className="w-full h-full px-4 py-16 flex flex-col items-center justify-start text-center bg-[#1a1a1d] text-[#e0e0e0] overflow-y-auto pb-4">
       <img
         src={profilePic}
         alt="Profile"
