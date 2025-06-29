@@ -54,7 +54,7 @@ export default function Profile() {
 
       <div className="mt-10 flex flex-col items-center w-full px-4">
         <img
-        src="https://github-readme-streak-stats.herokuapp.com/?user=NammanShukla&theme=tokyonight"
+        src="https://streak-stats.demolab.com/?user=NammanShukla&theme=tokyonight"
         alt="GitHub Streak"
         className="w-full max-w-md rounded-lg shadow-md"/>
       </div>
