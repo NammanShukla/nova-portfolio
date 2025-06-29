@@ -36,6 +36,7 @@ export default function Profile() {
 
         <a
           href="https://www.linkedin.com/in/namman-shukla-7b0531275/"
+          target="_blank"
           className="bg-[#3a3a3c] p-3 rounded-full hover:bg-[#0072b1] transition"
         >
           <FaLinkedin className="text-white text-xl" />
