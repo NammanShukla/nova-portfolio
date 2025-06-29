@@ -1,6 +1,7 @@
 import ReactMarkdown from "react-markdown";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { SiGoogledocs } from "react-icons/si";
+import { IoClose } from "react-icons/io5";
 
 export default function ProjectPanel({ project, onClose }) {
   if (!project) return null;
@@ -21,9 +22,9 @@ export default function ProjectPanel({ project, onClose }) {
     <div className="fixed top-0 right-0 w-full md:w-1/3 h-full bg-[#121224] text-[#e0e0e0] shadow-lg p-6 overflow-y-auto z-50">
       <button
         onClick={onClose}
-        className="text-white mb-4 font-bold text-sm hover:text-[#FFD600]"
+        className="text-white hover:text-[#FFD600] text-2xl mb-4 ml-auto"
       >
-        Close
+        <IoClose />
       </button>
 
       <h2 className="text-2xl font-bold text-[#FFD600] mb-4">{project.title}</h2>
