@@ -1,6 +1,6 @@
 ---
 title: "Shopping Cart"
-tags: ["Javascript"]
+tags: ["Javascript", "FreeCodeCamp"]
 github: {name: "Source Code", url: "https://github.com/NammanShukla/shopping-cart-js"}
 summary: "Built a shopping cart using basic Object-Oriented Programming principles in JavaScript"
 ---

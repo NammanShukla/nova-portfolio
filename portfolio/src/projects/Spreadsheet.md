@@ -1,6 +1,6 @@
 ---
 title: "Spreadsheet Application"
-tags: ["Javascript"]
+tags: ["Javascript", "FreeCodeCamp"]
 github: {name: "Source Code", url: "https://github.com/NammanShukla/js-spreadsheet"}
 summary: "Built a basic spreadsheet app using functional programming concepts in JavaScript."
 ---

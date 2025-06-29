@@ -1,6 +1,6 @@
 ---
 title: "Statistic Calculator"
-tags: ["Javascript"]
+tags: ["Javascript","FreeCodeCamp"]
 github: {name: "Source Code", url: "https://github.com/NammanShukla/stat-calc"}
 summary: "Built a statistics calculator using advanced array methods in JavaScript."
 ---
