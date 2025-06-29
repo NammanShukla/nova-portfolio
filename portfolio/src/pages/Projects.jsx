@@ -10,7 +10,7 @@ const projectsContext = import.meta.glob('/src/projects/*.md', {
 export default function Projects() {
   const [projects, setProjects] = useState([]);
   const [search, setSearch] = useState("");
-  const [tagFilter, setTagFilter] = useState("");
+  const [tagFilter, setTagFilter] = useState([]);
   const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
@@ -40,13 +40,14 @@ export default function Projects() {
     );
   };
 
-
   const filteredProjects = projects.filter((proj) => {
     const matchesSearch =
       proj.title?.toLowerCase().includes(search.toLowerCase()) ||
       proj.body?.toLowerCase().includes(search.toLowerCase());
 
-    const matchesTag = tagFilter.length === 0 || tagFilter.every((tag) => proj.tags?.includes(tag));
+    const matchesTag =
+      tagFilter.length === 0 ||
+      tagFilter.every((tag) => proj.tags?.includes(tag));
 
     return matchesSearch && matchesTag;
   });
@@ -54,48 +55,46 @@ export default function Projects() {
   const uniqueTags = [...new Set(projects.flatMap((proj) => proj.tags || []))];
 
   return (
-    <div className="min-h-screen p-6 bg-[#1a1a1d] text-[#e0e0e0] relative">
+    <div className="min-h-screen bg-[#1a1a1d] text-[#e0e0e0] relative">
       {/* Search + Filter */}
-      <div className="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <input
-          type="text"
-          placeholder="Search Projects..."
-          className="p-3 w-full sm:w-1/2 bg-[#2a2a2e] border border-[#FFD600] rounded text-base focus:outline-none focus:ring-2 focus:ring-[#FFD600]"
-          onChange={(e) => setSearch(e.target.value)}
-        />
+      <div
+        className={`p-6 pb-0 transition-all duration-300 ease-in-out ${
+          selectedProject ? "md:mr-[33%]" : ""
+        }`}
+      >
+        <div className="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <input
+            type="text"
+            placeholder="Search Projects..."
+            className="p-3 w-full sm:w-1/2 bg-[#2a2a2e] border border-[#FFD600] rounded text-base focus:outline-none focus:ring-2 focus:ring-[#FFD600]"
+            onChange={(e) => setSearch(e.target.value)}
+          />
 
-        <div className="flex flex-wrap gap-2">
-          {uniqueTags.map((tag) => (
-            <button
-              key={tag}
-              onClick={() => toggleTag(tag)}
-              className={`px-3 py-1 rounded text-xs ${
-                tagFilter.includes(tag)
-                  ? "bg-[#FFD600] text-black"
-                  : "bg-[#3a3a3c] text-white"
-              }`}
-            >
-              {tag}
-            </button>
-          ))}
-
-          {(tagFilter || search) && (
-            <button 
-                onClick={() => {
-                setSearch("");
-                setTagFilter("");
-              }}
-              className="px-3 py-1 rounded text-xs bg-[#FFD600] text-black hover:bg-yellow-400 transition"
+          <div className="flex flex-wrap gap-2">
+            {uniqueTags.map((tag) => (
+              <button
+                key={tag}
+                onClick={() => toggleTag(tag)}
+                className={`px-3 py-1 rounded text-xs ${
+                  tagFilter.includes(tag)
+                    ? "bg-[#FFD600] text-black"
+                    : "bg-[#3a3a3c] text-white"
+                }`}
               >
-                Reset
-            </button>
-          )}
+                {tag}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
       {/* Project Cards */}
-      <div className={`transition-all duration-300 ${selectedProject ? "md:w-2/3" : "w-full"} relative`}>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div
+        className={`p-6 pt-0 transition-all duration-300 ease-in-out ${
+          selectedProject ? "md:mr-[33%]" : ""
+        }`}
+      >
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 pb-20">
           {filteredProjects.map((proj, idx) => (
             <div
               key={idx}
@@ -123,21 +122,12 @@ export default function Projects() {
           ))}
 
           {filteredProjects.length === 0 && (
-            <div className="text-center text-gray-500 col-span-full py10">
-              No Results Found. 
+            <div className="text-center text-gray-500 col-span-full py-10">
+              No Results Found.
             </div>
           )}
-
-
-          {selectedProject && (
-            <ProjectPanel
-              project={selectedProject}
-              onClose={() => setSelectedProject(null)} 
-          
-            />
-          )}
+        </div>
       </div>
-    </div>
 
       {/* Side Panel */}
       {selectedProject && (
