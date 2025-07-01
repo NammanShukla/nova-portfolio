@@ -71,7 +71,7 @@ export default function BlogPage() {
                 <li
                   key={f.slug}
                   onClick={() => navigate(`/blogs/${f.slug}`)}
-                  className="cursor-pointer text-sm text-[#e0e0e0] hover:text-[#FFD600] transition"
+                  className="w-full text-left px-4 py-2 bg-[#2c2c2e] hover:bg-[#FFD600] hover:text-black text-[#e0e0e0] rounded transition"
                 >
                   {f.title}
                 </li>
@@ -128,7 +128,7 @@ export default function BlogPage() {
                   <li
                     key={f.slug}
                     onClick={() => navigate(`/blogs/${f.slug}`)}
-                    className="cursor-pointer text-sm text-[#e0e0e0] hover:text-[#FFD600] transition"
+                    className="w-full text-left px-4 py-2 bg-[#2c2c2e] hover:bg-[#FFD600] hover:text-black text-[#e0e0e0] rounded transition"
                   >
                     {f.title}
                   </li>

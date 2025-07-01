@@ -12,10 +12,14 @@ export default function Projects() {
   const [search, setSearch] = useState("");
   const [tagFilter, setTagFilter] = useState([]);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function loadProjects() {
       const loaded = [];
+      setLoading(true);
+
+      setLoading(false);
 
       for (const path in projectsContext) {
         const raw = await projectsContext[path]();
@@ -121,7 +125,7 @@ export default function Projects() {
             </div>
           ))}
 
-          {filteredProjects.length === 0 && (
+          {loading ? (<p className="text-center text-gray-400">Loading...</p>) : filteredProjects.length === 0 && (
             <div className="text-center text-gray-500 col-span-full py-10">
               No Results Found.
             </div>
