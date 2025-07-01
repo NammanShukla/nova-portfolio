@@ -1,4 +1,4 @@
-import profilePic from '../assets/profile-pic.jpeg'; 
+import profilePic from '../assets-1/profile-pic.jpeg'; 
 import { FaDiscord, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
