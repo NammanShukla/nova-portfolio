@@ -11,6 +11,7 @@ export default function Blog() {
   const [blogs, setBlogs] = useState([]);
   const [search, setSearch] = useState("");
   const [tagFilter, setTagFilter] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function loadBlogs() {
@@ -30,6 +31,7 @@ export default function Blog() {
 
       loaded.sort((a, b) => new Date(b.date) - new Date(a.date));
       setBlogs(loaded);
+      setLoading(false);
     }
 
     loadBlogs();
@@ -85,13 +87,18 @@ export default function Blog() {
       </div>
 
       <div className="grid sm:grid-cols-2 gap-6">
-        {filteredBlogs.map((blog) => (
-          <BlogCard key={blog.slug} blog={blog} />
-        ))}
-        {filteredBlogs.length === 0 && (
+        {loading ? (
+          <div className="text-center text-gray-400 col-span-full py-10">
+            Loading...
+          </div>
+        ) : filteredBlogs.length === 0 ? (
           <div className="text-center text-gray-500 col-span-full py-10">
             No blog posts found.
           </div>
+        ) : (
+          filteredBlogs.map((blog) => (
+            <BlogCard key={blog.slug} blog={blog} />
+          ))
         )}
       </div>
     </div>
