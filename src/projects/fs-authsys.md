@@ -1,6 +1,6 @@
 ---
 title: "User Authentication with JWT"
-tags: ["React", "Redux", "Context API", "JWT", "MongoDB"]
+tags: ["React", "Redux", "Context API", "JWT", "MongoDB", "Express.js", "CRUD", "REST API"]
 github: {name: "Source Code", url: "https://github.com/NammanShukla/fs-authsys"}
 summary: "Implemented stateless JWT-based authentication in a React full-stack app with Redux and Context API."
 image: "/nova-portfolio/assets/fs-sysauth.png"
