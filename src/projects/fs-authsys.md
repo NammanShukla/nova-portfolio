@@ -6,10 +6,6 @@ summary: "Implemented stateless JWT-based authentication in a React full-stack a
 image: "/nova-portfolio/assets/fs-sysauth.png"
 ---
 
-This project features a secure and scalable authentication system built with React, Node.js, and MongoDB. It uses JWT for stateless login sessions, Redux and Context API for state management, and a clean controller-based structure on the backend for better modularity and maintainability.
+This project implements secure, scalable auth using React, Node.js, and MongoDB. It uses JWTs for stateless sessions, Redux + Context for state, and a modular backend with bcrypt and passport-local for verification.
 
-On login, the backend verifies credentials using bcrypt and passport-local, then generates a signed JWT containing the user ID. The token is sent to the frontend, stored in Redux and localStorage, and included in all future API requests. Registration securely hashes passwords and stores the user in the database.
-
-The frontend now includes a ProtectedRoutes.js component to guard access to pages based on login state. On logout, Redux and localStorage are cleared and the user is returned to the homepage. Forms are validated before submission, and the UI dynamically reflects authentication status across all components using Context.
-
-Earlier session-based auth with express-session and MongoDB has been deprecated in favor of this modern JWT flow, making the app more robust and production-ready.
+On login, a JWT is created and stored in Redux/localStorage, auto-included in future API calls. ProtectedRoutes guard frontend pages, and logout clears all auth data. Forms are validated, and the UI updates dynamically based on login state.
