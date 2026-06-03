@@ -54,7 +54,7 @@ export default function Resume() {
           <ul className="text-base md:text-base space-y-6">
             <li>
               <strong>Software Intern — Think Future Technologies (TFTUS)</strong> <br />
-              <span className="text-gray-500 italic">May 2025 – Present</span><br />
+              <span className="text-gray-500 italic">May 2025 – August 2025</span><br />
               Working under the guidance of Full Stack Developer Ms. Jyoti Mishra, contributing to productive projects and enhancing skills in modern web development.  
               Responsibilities include research, documentation, and iterative feature building across the stack.
             </li>
