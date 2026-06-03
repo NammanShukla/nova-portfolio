@@ -17,7 +17,7 @@ export default function Resume() {
             <span>About Me</span>
           </div>
           <p className="text-base md:text-base leading-relaxed">
-            Software developer with experience in full stack development, cloud deployment, and self hosted infrastructure projects. Comfortable working independently or as part of a team, with a strong focus on problem solving, continuous learning, and building reliable solutions. 
+            Software developer with experience in full-stack development, cloud deployment, and self-hosted infrastructure projects. Comfortable working independently or as part of a team, with a strong focus on problem-solving, continuous learning, and building reliable solutions. 
             <br />
             <br />
             Interested in software development, cybersecurity, and IT infrastructure, I enjoy exploring new technologies and applying them to practical projects. I'm always looking for opportunities to expand my technical skills and knowledge, take on new challenges, and grow as a professional.
